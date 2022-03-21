@@ -1,0 +1,8 @@
+#!/bin/bash
+url="https://rms.sexy/?js"
+petition="$(curl -s "$url" | grep "/img" | cut -c68- | rev | cut -c19- | rev | tr -d '"')"
+trueurl="https://rms.sexy"
+finally="$trueurl$petition"
+
+echo $finally
+kitty +kitten icat $finally

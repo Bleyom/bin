@@ -1,0 +1,5 @@
+#!/bin/bash
+wallpapers_paths="$HOME/wallpapers"
+wall="$(ls $wallpapers_paths | shuf -n 1)"
+
+feh --bg-fill $wallpapers_paths/$wall
